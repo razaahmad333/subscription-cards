@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+$redAlpha: rgb(218, 140, 147);
+$red: rgb(167, 20, 76);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  //   font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  //   font-family: "Dongle", sans-serif;
+}
+h1 {
+  margin: 20px 0;
+  text-align: center;
+  color: $red;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 40px 10px;
+  padding-top: 10px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0px 0px 2px 0px $redAlpha;
+  color: rgb(46, 45, 45);
+  width: 100%;
+  padding: 10px;
+
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .tag {
+    background-color: $red;
+    color: white;
+    width: 100px;
+    font-size: 0.9em;
+    padding: 5px 0;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    transform: rotateZ(-40deg);
+  }
+
+  .companyName {
+    margin: 50px auto;
+    margin-top: 0px;
+    border-bottom: 2px solid rgb(236, 224, 224);
+    width: fit-content;
+    padding: 40px;
+    font-size: 2em;
+    opacity: 0.9;
+  }
+  .pricing {
+    padding: 10px 30px;
+    background-color: rgb(252, 213, 213);
+    width: fit-content;
+    color: rgb(78, 75, 75);
+    margin: 0 auto;
+    .pr {
+      font-size: 4em;
+    }
+
+    .condition {
+      font-weight: 400;
+      color: rgb(19, 174, 235);
+    }
+  }
+
+  .desc {
+    padding: 20px;
+    text-align: justify;
+    font-weight: 600;
+    height: 250px;
+    color: rgb(48, 45, 45);
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    background-color: $red;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 15px;
+  }
+}
+
+.hide {
+  display: block;
+}
+
+.pagination {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .active {
+    display: block;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .hide {
+    display: none;
+  }
+
+  .pagination {
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 0 $redAlpha;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background-color: $red;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+    }
+    .dots {
+      display: flex;
+      .dot {
+        display: block;
+        margin: 0 10px;
+        width: 5px;
+        background-color: $red;
+        padding: 5px;
+
+        height: 5px;
+        // padding: ;
+        border-radius: 50%;
+        opacity: 0.3;
+      }
+      .activeD {
+        opacity: 1;
+      }
+    }
+  }
+}

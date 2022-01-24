@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+  color: #a7144c;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 40px 10px;
+  padding-top: 10px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 2px 0px #da8c93;
+          box-shadow: 0px 0px 2px 0px #da8c93;
+  color: #2e2d2d;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .tag {
+  background-color: #a7144c;
+  color: white;
+  width: 100px;
+  font-size: 0.9em;
+  padding: 5px 0;
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  -webkit-transform: rotateZ(-40deg);
+          transform: rotateZ(-40deg);
+}
+
+.card .companyName {
+  margin: 50px auto;
+  margin-top: 0px;
+  border-bottom: 2px solid #ece0e0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 40px;
+  font-size: 2em;
+  opacity: 0.9;
+}
+
+.card .pricing {
+  padding: 10px 30px;
+  background-color: #fcd5d5;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #4e4b4b;
+  margin: 0 auto;
+}
+
+.card .pricing .pr {
+  font-size: 4em;
+}
+
+.card .pricing .condition {
+  font-weight: 400;
+  color: #13aeeb;
+}
+
+.card .desc {
+  padding: 20px;
+  text-align: justify;
+  font-weight: 600;
+  height: 250px;
+  color: #302d2d;
+}
+
+.card a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  background-color: #a7144c;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.hide {
+  display: block;
+}
+
+.pagination {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .active {
+    display: block;
+  }
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .hide {
+    display: none;
+  }
+  .pagination {
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px 0 #da8c93;
+            box-shadow: 0 0 10px 0 #da8c93;
+    padding: 10px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pagination button {
+    background-color: #a7144c;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+  }
+  .pagination .dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pagination .dots .dot {
+    display: block;
+    margin: 0 10px;
+    width: 5px;
+    background-color: #a7144c;
+    padding: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  .pagination .dots .activeD {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

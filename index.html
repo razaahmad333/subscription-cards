@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Subscription Cards</h1>
+
+    <div class="container">
+      <div class="card active">
+        <div class="tag">New</div>
+
+        <h3 class="companyName">
+          Private Limited <br />
+          Company
+        </h3>
+
+        <div class="pricing">
+          <b> Starting </b>
+
+          <br />
+          <div class="pr">₹999</div>
+          <div class="condition">+Gov Fee</div>
+        </div>
+
+        <p class="desc">
+          The default option for start-ups and growing businesses as only
+          private limited companies can raise venture capital. This type of
+          company offers limited liability for its shareholders with certain
+          restrictions placed on the ownership. Private limited company
+          registration, directors may me different from shareholders
+        </p>
+
+        <a href="#">Know More</a>
+      </div>
+
+      <div class="card hide">
+        <!-- <div class="tag">New</div> -->
+
+        <h3 class="companyName">
+          Limited Liability <br />
+          Partnership
+        </h3>
+
+        <div class="pricing">
+          <b> Starting </b>
+
+          <br />
+          <div class="pr">₹999</div>
+          <div class="condition">+Statutory Fees</div>
+        </div>
+
+        <p class="desc">
+          LLP was introduced to provide a form of business that is easy to
+          maintain and to help owners by providing them with limited liability.
+          Limited Liability Partnership Registration combines the benefits of a
+          partnership with that of a limited liability company.
+        </p>
+
+        <a href="#">Know More</a>
+      </div>
+      <div class="card hide">
+        <!-- <div class="tag">New</div> -->
+
+        <h3 class="companyName">
+          One Person <br />
+          Company
+        </h3>
+
+        <div class="pricing">
+          <b> Starting </b>
+          <br />
+          <div class="pr">₹5998</div>
+          <div class="condition">* All Inclusive</div>
+        </div>
+
+        <p class="desc">
+          The best structure for solo entrepreneurs looking beyong the
+          opportunities a sole proprietorship affords. Here, a single promoter
+          gains full authority over the company, restricting his/her liability
+          towards their contributions to the enterprise. The said person will be
+          the sole shareholder and director.
+        </p>
+
+        <a href="#">Know More</a>
+      </div>
+      <div class="card hide">
+        <!-- <div class="tag">New</div> -->
+
+        <h3 class="companyName">
+          Partership <br />
+          Firm
+        </h3>
+
+        <div class="pricing">
+          <b> Starting </b>
+
+          <br />
+          <div class="pr">₹999</div>
+          <div class="condition">+Statutory Fees</div>
+        </div>
+
+        <p class="desc">
+          A business structure in which two or more individuals manage a
+          business per the terms in Partership Deed. It's best suitable for home
+          businesses that are unlikely to take any debt due to low cost, ease of
+          setting up and minimal compliance requirements.
+        </p>
+
+        <a href="#">Know More</a>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <button class="left" onclick="changeCard(-1)">◀</button>
+      <div class="dots">
+        <button class="dot activeD"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+      <button class="right" onclick="changeCard(1)">▶</button>
+    </div>
+
+    <script>
+      let cards = Array.from(document.querySelectorAll(".card"));
+      let totalCards = 4;
+      let currentIndex = 0;
+      let dots = Array.from(document.querySelectorAll(".dot"));
+      function changeCard(i) {
+        if (currentIndex + i > -1 && currentIndex + i < totalCards) {
+          //   Array(cards).forEach((card) => {
+          //     card.classList.toggle("");
+          //     card.classList.toggle("active");
+
+          //   });
+
+          cards[currentIndex].classList.remove("active");
+          cards[currentIndex].classList.add("hide");
+          cards[currentIndex + i].classList.remove("hide");
+          cards[currentIndex + i].classList.add("active");
+
+          dots[currentIndex].classList.remove("activeD");
+          dots[currentIndex + i].classList.add("activeD");
+
+          currentIndex += i;
+        }
+      }
+    </script>
+  </body>
+</html>
